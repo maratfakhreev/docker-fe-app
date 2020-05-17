@@ -1,3 +1,21 @@
+## Docker commands
+
+Development
+```
+docker-compose build dev
+docker-compose up dev
+docker-compose down dev
+```
+
+Production
+```
+docker-compose build prod
+docker-compose up prod
+docker-compose down prod
+```
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

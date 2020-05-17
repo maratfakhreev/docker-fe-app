@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8000:3000
+    volumes:
+      - ./src:/app/src
+    command: yarn start
+    stdin_open: true
+
+  # docker-compose build dev
+  # docker-compose up dev
+  # docker-compose down dev
+
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - 8080:5000
+    command: serve -s build
+
+  # docker-compose build prod
+  # docker-compose up prod
+  # docker-compose down prod
